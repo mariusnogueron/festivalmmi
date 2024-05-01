@@ -1,0 +1,31 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'nunito' : ['Nunito Sans', 'sans-serif'],
+        'instrument': ['instrument'],
+        'instrumentitalic': ['instrumentitalic'],
+      },
+      fontWeight: {
+        'light': 300,
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'extrabold': 800,
+        'black': 900,
+      },
+      colors: {
+        'beige': '#F5EEDE',
+        'orange': '#FF5937',
+        'red': '#DC2E31',
+      },
+    },
+  },
+  plugins: [],
+};
