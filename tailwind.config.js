@@ -6,10 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'menu' : '3px 3px',
+      },
       fontFamily: {
         'nunito' : ['Nunito Sans', 'sans-serif'],
-        'instrument': ['instrument'],
-        'instrumentitalic': ['instrumentitalic'],
+        'instrument': ['"Instrument Serif", serif;'],
       },
       fontWeight: {
         'light': 300,
