@@ -7,6 +7,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage : {
+        'mum_and_girl': "url:('img/mum_and_girl.png')"
+      },
+      dropShadow : {
+        'merci' : '0 2px 3px rgb(255, 89, 55, 0.8)',
+      },
       boxShadow: {
         'menu' : '3px 3px',
       },
