@@ -1,11 +1,61 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from 'lenis'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+
 
 var loader = document.getElementById("loader");
 
 window.addEventListener("load", () => {
     loader.style.display = "none"
 })
+
+
+
+const lenis = new Lenis()
+
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
+
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// Sélectionner le header et les sections pour l'animation
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+  
+    // Vérifier si le scroll a déjà eu lieu
+    let hasScrolled = false;
+    console.log('Initial hasScrolled:', hasScrolled);
+  
+    // Fonction pour déclencher l'animation de défilement
+    function scrollToAccueil() {
+      console.log('scrollToAccueil function triggered');
+      if (!hasScrolled) {
+        console.log('First scroll detected, scrolling to #accueil');
+        hasScrolled = true; // Marquer comme ayant défilé
+        gsap.to(window, { duration: 2, scrollTo: "#accueil", ease: "power2.inOut" });
+      } else {
+        console.log('Scroll event detected but already scrolled');
+      }
+    }
+  
+    // Écouter l'événement de défilement
+    window.addEventListener('scroll', scrollToAccueil, { once: true });
+    console.log('Scroll event listener added');
+  });
+
+
 
 // ----------------------------------------------------------
 
@@ -74,61 +124,47 @@ buttonMenu.addEventListener("click", () => {
 
     navVisible = !navVisible
 })
+gsap.registerPlugin(ScrollTrigger);
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     console.log("DOM chargé");
-//     gsap.registerPlugin(ScrollTrigger);
-    
-//     // Sélectionnez tous les conteneurs avec la classe .contain-heart
-//     const containHearts = document.querySelectorAll(".contain-heart");
+const project = document.querySelector(".project-container");
 
-//     // Initialisez la largeur maximale
-//     let maxWidth = 0;
+// Vérifie si l'élément project-container est trouvé
 
-//     // Parcourez tous les conteneurs pour calculer la largeur maximale
-//     containHearts.forEach(function(containHeart) {
-//         const heart = containHeart.querySelector(".marmite, .hand_heart, .sign");
-        
-//         if (!heart) {
-//             console.log("Erreur: L'élément 'coeur' n'a pas été trouvé dans le conteneur.");
-//             return; // Passez à l'itération suivante si aucun élément 'coeur' n'est trouvé
-//         }
-        
-//         console.log("L'élément 'coeur' a été trouvé dans le conteneur.");
-//         console.log("La largeur de l'élément 'coeur' est:", heart.offsetWidth);
+function getScrollAmount() {
+    const screenWidth = window.innerWidth;
+    const projectWidth = project.scrollWidth;
 
-//         // Ajoutez la largeur du conteneur à la largeur maximale
-//         maxWidth += heart.offsetWidth;
-//     });
+    if (screenWidth < 1024) {
+        return 0;
+    } else {
+        const scrollAmount = -(projectWidth - screenWidth);
+        return scrollAmount;
+    }
+}
 
-//     // Appliquez l'effet de défilement horizontal avec le point de départ et d'arrêt basé sur la largeur maximale
-//     containHearts.forEach(function(containHeart) {
-//         const heart = containHeart.querySelector(".marmite, .hand_heart, .sign");
+// Vérifie si la fonction getScrollAmount retourne une valeur correcte
+const scrollAmount = getScrollAmount();
 
-//         function getScrollAmount() {
-//             return -(maxWidth - window.innerWidth);
-//         }
+if (scrollAmount === 0) {
+}
 
-//         const tween = gsap.to(heart, {
-//             x: getScrollAmount,
-//             duration: 3,
-//             ease: "none"
-//         });
+// Ajuster la durée de l'animation pour inclure une marge au début et à la fin
+const startDelay = 50; // px à attendre avant de commencer le défilement
+const endDelay = 50; // px à attendre après le défilement
 
-//         ScrollTrigger.create({
-//             trigger: containHeart,
-//             start: "center center",
-//             end: () => `+=${getScrollAmount()}`,
-//             pin: true,
-//             animation: tween,
-//             scrub: 1,
-//             invalidateOnRefresh: true,
-//             markers: true
-//         });
-//     });
-// });
+const tween = gsap.to(project, {
+    x: getScrollAmount,
+    ease: "none",
 
+});
 
-
-
-
+ScrollTrigger.create({
+    trigger: "#projects",
+    start: `top top`, // Ajouter un délai au début
+    end: () => `+=${project.scrollWidth - window.innerWidth + endDelay}`, // Ajouter un délai à la fin
+    pin: true,
+    animation: tween,
+    scrub: 1,
+    invalidateOnRefresh: true,
+    markers: true,
+});

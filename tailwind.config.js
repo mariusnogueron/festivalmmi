@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes : {
+        role : {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+      animation : {
+        role : 'role'
+      },
       backgroundImage : {
         'mum_and_girl': "url:('img/mum_and_girl.png')"
       },
@@ -36,5 +45,24 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [function({ addUtilities }) {
+    const newUtilities = {
+      'html.lenis': {
+        height: 'auto',
+      },
+      '.lenis.lenis-smooth': {
+        scrollBehavior: 'auto !important',
+      },
+      '.lenis.lenis-smooth [data-lenis-prevent]': {
+        overscrollBehavior: 'contain',
+      },
+      '.lenis.lenis-stopped': {
+        overflow: 'hidden',
+      },
+      '.lenis.lenis-scrolling iframe': {
+        pointerEvents: 'none',
+      },
+    }
+    addUtilities(newUtilities, ['responsive', 'hover'])
+  }],
 };

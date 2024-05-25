@@ -23,8 +23,8 @@
 
 <section id="accueil" class="h-svh flex flex-col">
 <nav id="navBar" class="z-30 flex justify-between items-center p-5 w-full fixed top-0 delay-400 ease-out	duration-300">
-  <a href="#homeBack" id="home" class="text-4xl uppercase font-instrument italic text-orange z-20">home</a>
-  <button id="buttonMenu" class="relative font-semibold text-4xl uppercase text-beige z-50 bg-orange rounded-xl px-1.5 py-1 border border-black shadow-menu shadow-black duration-100 ease-linear active:hover:translate-x-1 active:hover:translate-y-1 active:hover:shadow-none">menu</button>
+  <a href="#homeBack" id="home" class="md:text-4xl text-3xl uppercase font-instrument italic text-orange z-20">home</a>
+  <button id="buttonMenu" class="relative font-semibold md:text-4xl text-3xl uppercase text-beige z-50 bg-orange rounded-xl px-1.5 py-1 border border-black shadow-menu shadow-black duration-100 ease-linear active:hover:translate-x-1 active:hover:translate-y-1 active:hover:shadow-none">menu</button>
 </nav>
 
 <div  id="homeBack" class="flex items-center justify-center h-full flex-col relative">
@@ -51,105 +51,122 @@
 </div>
 
 
-<div class="w-full text-3xl flex items-center justify-center gap-3 flex-col h-[100svh]">
+<div class="w-full text-3xl flex items-center justify-center gap-3 flex-col h-[90svh]">
 
   <div className="container-text-mom" class="flex text-center justify-center">
-  <p id="startscroll" class="uppercase font-nunito lg:w-[37rem] md:text-3xl text-2xl">
-    Les mamans assurent <strong class="text-orange">plusieurs rôles</strong> dans la vie de l'enfant
+  <p id="startscroll" class="uppercase font-nunito lg:w-[69rem] md:text-5xl text-2xl">
+    Les mamans assurent <strong class="text-orange animate-role">plusieurs rôles</strong> dans la vie de l'enfant
   </p>
 </div>
     
   <p class="font-light font-nunito text-[5svw] md:text-3xl">Elles sont celles qui :</p>
 
-  <div class="w-[30svw] md:w-40">
-    <img src="img/coeur.png" alt="coeur" class="h-full w-full object-contain">
-  </div>
-
+  <div class="mt-32">
+  <img src="img/fleche.svg" alt="une fleche qui pointe vers le bas">
+</div>
 </div>
 
 
-<div class="contain-heart  gap-10 flex justify-center flex-col items-center">
-  <div id="coeur1" class="marmite flex justify-center flex-col items-center">
-    <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">nourrissent physiquement et émotionnellement</span>
-    <div class="w-[14svw] md:w-24 lg:w-32">
-    <img class="object-contain w-full h-full" src="img/marmite.svg" alt="logo marmite">
-    </div>
-  <div id="coeur2" class="marmite flex justify-center flex-col items-center">
-    <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui enseignent, qui consolent</span>
-    <div class="w-[14svw] md:w-24 lg:w-32">
-    <img class="object-contain w-full h-full" src="img/hand_heart.svg" alt="logo marmite">
-    </div>
-  <div id="coeur3" class="marmite flex justify-center flex-col items-center">
-    <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui encouragent et qui guident.</span>
-    <div class="w-[14svw] md:w-24 lg:w-32">
-    <img class="object-contain w-full h-full" src="img/sign.svg" alt="logo marmite">
-    </div>
-  </div>
-  </div>
-  </div>
-</div>
 
-<div class="relative h-screen">
-  <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30 sm:opacity-80" style="background-image: url('/img/mum_and_girl.png');"></div>
-  
-  <div class="flex items-center h-full w-full sm:w-[31rem] z-[1] relative ">
-    <span class="uppercase text-orange font-instrument sm:text-7xl flex z-10 flex-col gap-10 sm:ml-10 p-10 sm:p-0 text-6xl">
-      un pilier pour l'enfant
-      <div class="font-nunito  text-xl sm:text-2xl  text-black font-semibold lowercase flex gap-8 flex-col">
-      <p class="text-justify">
-        Un guide, une oreille attentive, une main tendue et un regard apaisant pour ses enfants, ainsi que son mari. 
-      </p>
-        <p>
-          La maman est l’équilibre de chaque foyer.
-        </p> 
-        <p class="text-justify">
-          C’est elle qui assure presque toutes les responsabilités liées avec ses enfants et sa maison.
-        </p>
+
+<div class=" flex justify-center items-center mb-36">
+
+   
+    <div class="">
+
+
+        
+        <div class="flex gap-20 flex-col">
+        <div class="flex gap-7">
+          
+          <img class="object-contain w-32 cursor-pointer" src="img/marmite.svg" alt="logo marmite">
+          <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui encouragent et qui guident.</span>
+          </div>
+
+          <div class="flex gap-7">
+            
+            <img class="object-contain w-32 cursor-pointer" src="img/hand_heart.svg" alt="logo marmite">
+            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">nourrissent physiquement et émotionnellement</span>
+          </div>
+
+          <div class="flex gap-7">
+            
+            <img class="object-contain w-32 cursor-pointer" src="img/sign.svg" alt="logo marmite">
+            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui enseignent, qui consolent</span>
+          </div>
+        </div>
+
+
+
+          <div class="flex justify-evenly gap-10 flex-col">
+            
+          
+          
+
       </div>
 
-
       
-    </span>
+
   </div>
-</div>
+    
+     
+  </div>
+
+  </div>
+  <div class="w-full border-cyan-50 border-2 border-solid"></div>
+  </div>
+ 
 
 
+<div class="project-container lg:flex" id="projects">
 
-  <div class=" flex justify-center items-center my-10">
-    <div className="container-data" class="flex items-center flex-col gap-20  sm:gap-10">
-      <div className="first-container-data" class="flex justify-between items-center w-11/12 lg:w-[58rem] bg-white rounded-[2.3rem] flex-col sm:flex-row sm:h-60 ">
-        <span class="flex justify-center text-orange font-nunito font-extrabold sm:w-1/3 py-5 text-9xl sm:text-[10svw] sm:py-0 md:text-8xl">65%</span>
-        <div className="bg-container" class="flex justify-center flex-col bg-orange h-5/6 rounded-3xl font-nunito font-semibold  text-justify px-10 py-8 mr-0 w-full sm:mr-5 sm:w-2/3   sm:text-[2.9svw] sm:leading-6 md:text-2xl">
-          <span class="text-white min-h-full">Environ 65% des enfants qui ont une relation sécurisée avec leur mère ont tendance à être plus coopératifs, plus autonomes et plus empathiques.</span>
-          <span class="text-white flex justify-end text-sm">American Psychological Association</span>
+
+  <div class="section relative h-screen">
+    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30 sm:opacity-80" style="background-image: url('/img/mum_and_girl.png');"></div>
+    <div class="flex items-center h-screen w-screen  z-[1] relative">
+      <span class="text-orange sm:w-[31rem] font-instrument sm:text-7xl flex z-10 flex-col gap-10 sm:ml-10 p-10 sm:p-0 text-6xl">
+        UN PILIER POUR L'ENFANT
+        <div class="font-nunito text-xl sm:text-2xl text-black font-semibold flex gap-8 flex-col">
+          <p class="text-justify">Un guide, une oreille attentive, une main tendue et un regard apaisant pour ses enfants, ainsi que son mari.</p>
+          <p>La maman est l’équilibre de chaque foyer.</p>
+          <p class="text-justify">C’est elle qui assure presque toutes les responsabilités liées avec ses enfants et sa maison.</p>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <div class="section flex justify-center items-center my-10">
+    <div class="flex flex-col gap-10 w-11/12 lg:w-[58rem]">
+      <div class="flex justify-between items-center bg-white rounded-[2.3rem] flex-col sm:flex-row sm:h-60 p-5">
+        <span class="text-orange font-nunito font-extrabold text-9xl sm:text-[10svw] md:text-8xl">65%</span>
+        <div class="flex flex-col bg-orange h-5/6 rounded-3xl font-nunito font-semibold text-white text-justify px-10 py-8 sm:w-2/3">
+          <span>Environ 65% des enfants qui ont une relation sécurisée avec leur mère ont tendance à être plus coopératifs, plus autonomes et plus empathiques.</span>
+          <span class="flex justify-end text-sm mt-2">American Psychological Association</span>
         </div>
       </div>
 
-      <div className="second-container-data" class="flex justify-center gap-5 w-11/12 flex-col lg:w-[58rem] lg:flex-row sm:flex-row">
-        <div class="flex justify-center h-60 bg-white rounded-[2.3rem] font-nunito flex-col px-10 py-8 first:order-2 sm:first:-order-none sm:w-2/3">
+      <div class="flex justify-center gap-5 flex-col lg:flex-row sm:flex-row">
+        <div class="bg-white rounded-[2.3rem] font-nunito flex-col px-10 py-8 h-60 flex justify-center sm:w-2/3">
           <span class="sm:text-[2.9svw] sm:leading-8 md:text-2xl">Les enfants qui reçoivent un soutien maternel constant ont 25% moins de risques de souffrir de problèmes de santé mentale à l'âge adulte.</span>
           <span class="flex justify-end text-sm">OMS</span>
         </div>
-        <div class="flex justify-center items-center bg-orange rounded-[2.3rem] font-extrabold  h-60  sm:w-1/3 ">
+        <div class="bg-orange rounded-[2.3rem] font-extrabold h-60 flex justify-center items-center sm:w-1/3">
           <span class="text-beige text-9xl sm:text-[10svw] md:text-8xl">25%</span>
         </div>
       </div>
     </div>
-
   </div>
 
-
-  <div class="h-svh bg-orange flex items-center justify-center">
-    <div class="w-full flex flex-col justify-center lg:w-[50rem]">
-      <span class="font-nunito font-light italic text-beige text-4xl text-justify lg:leading-[3.3rem]">
-        "Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."
-      </span>
-      <span class="flex justify-end text-beige" >Marie-Eve Roberge</span>
+  <div class="section h-screen bg-orange flex items-center justify-center">
+    <div class="w-svw flex flex-col justify-center">
+      <span class="font-nunito font-light italic text-beige text-4xl text-justify leading-[3.3rem] lg:px-40">"Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."</span>
+      <span class="flex justify-end text-beige mt-5 lg:px-40">Marie-Eve Roberge</span>
       <img class="relative top-72" src="img/transi.png" alt="">
     </div>
-    
   </div>
-  
+</div>
+
+<div class="h-svh">a</div>
 
 
   </body>
