@@ -29,31 +29,32 @@ gsap.ticker.lagSmoothing(0)
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// Sélectionner le header et les sections pour l'animation
+function fermerMenu() {
+    console.log("Fermeture du menu");
+    document.getElementById("menu").classList.add("hidden");
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-  
-    // Vérifier si le scroll a déjà eu lieu
-    let hasScrolled = false;
-    console.log('Initial hasScrolled:', hasScrolled);
-  
-    // Fonction pour déclencher l'animation de défilement
-    function scrollToAccueil() {
-      console.log('scrollToAccueil function triggered');
-      if (!hasScrolled) {
-        console.log('First scroll detected, scrolling to #accueil');
-        hasScrolled = true; // Marquer comme ayant défilé
-        gsap.to(window, { duration: 2, scrollTo: "#accueil", ease: "power2.inOut" });
-      } else {
-        console.log('Scroll event detected but already scrolled');
-      }
-    }
-  
-    // Écouter l'événement de défilement
-    window.addEventListener('scroll', scrollToAccueil, { once: true });
-    console.log('Scroll event listener added');
-  });
+// Récupérer tous les liens dans le menu et leur ajouter un écouteur d'événements de clic
+document.querySelectorAll("#menu a").forEach(item => {
+    item.addEventListener("click", function() {
+        console.log("Clic sur le lien dans le menu");
+        fermerMenu();
+    });
+});
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
@@ -168,3 +169,26 @@ ScrollTrigger.create({
     invalidateOnRefresh: true,
     markers: true,
 });
+
+
+function fillSVGs() {
+    const container = document.getElementById('svg-container');
+    const svg = container.querySelector('svg');
+    const svgWidth = svg.getBoundingClientRect().width;
+    const containerWidth = container.parentElement.getBoundingClientRect().width;
+    const svgCount = Math.ceil(containerWidth / svgWidth);
+
+    // Clear existing SVGs
+    container.innerHTML = '';
+
+    // Add the necessary number of SVGs to fill the container
+    for (let i = 0; i < svgCount; i++) {
+      const clonedSvg = svg.cloneNode(true);
+      container.appendChild(clonedSvg);
+    }
+  }
+
+  // Fill the SVGs on initial load
+  fillSVGs();
+
+ 

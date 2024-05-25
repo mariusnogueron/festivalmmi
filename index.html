@@ -8,23 +8,23 @@
 
     <link rel="stylesheet" href="src/index.css">
   </head>
-  <body class="bg-beige">
+  <body class="bg-beige overflow-x-hidden">
 
-    <header>
+
     <div id="loader" class="h-svh w-full z-100 fixed bg-no-repeat bg-center bg-[length:15%]" style="background-image: url('videos/loader.gif');"></div>
 
-    <div className="container" class="h-svh flex flex-col justify-center items-center ">
-      <span class="flex flex-col gap-10 text-orange font-instrument  text-4xl w-[80svw] lg:w-[64rem] lg:text-6xl sm:w-[86svw] sm:text-[5svw]">"Maman, est-ce que j’ai quelque chose à moi qui ne 
+    <div id="startscroll" class=" h-svh flex flex-col justify-center items-center ">
+      <span class="container-start flex flex-col gap-10 text-orange font-instrument  text-4xl w-[80svw] lg:w-[64rem] lg:text-6xl sm:w-[86svw] sm:text-[5svw]">"Maman, est-ce que j’ai quelque chose à moi qui ne 
         soit pas à vous ?" <strong>- Émile Zola</strong></span>
       <a href="#accueil"><svg class="absolute bottom-1 transform -translate-x-1/2 left-1/2" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
     </div>
-  </header>
+
 
 
 <section id="accueil" class="h-svh flex flex-col">
 <nav id="navBar" class="z-30 flex justify-between items-center p-5 w-full fixed top-0 delay-400 ease-out	duration-300">
   <a href="#homeBack" id="home" class="md:text-4xl text-3xl uppercase font-instrument italic text-orange z-20">home</a>
-  <button id="buttonMenu" class="relative font-semibold md:text-4xl text-3xl uppercase text-beige z-50 bg-orange rounded-xl px-1.5 py-1 border border-black shadow-menu shadow-black duration-100 ease-linear active:hover:translate-x-1 active:hover:translate-y-1 active:hover:shadow-none">menu</button>
+  <button id="buttonMenu" class="group relative font-semibold md:text-4xl text-3xl uppercase text-beige z-50 bg-orange rounded-xl px-1.5 py-1 border border-black shadow-menu shadow-black duration-100 ease-linear active:hover:translate-x-1 active:hover:translate-y-1 active:hover:shadow-none">menu</button>
 </nav>
 
 <div  id="homeBack" class="flex items-center justify-center h-full flex-col relative">
@@ -33,7 +33,7 @@
   Merci Maman
 </h1>
 
-<a class="flex " href=""><svg class="absolute bottom-1 transform -translate-x-1/2 left-1/2" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
+<a class="flex justify-center" href=""><svg class=" absolute bottom-1 animate-bounce" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
 </div>
 </section>
 
@@ -42,26 +42,26 @@
 <div id="menu" class="bg-orange fixed top-0 w-full h-full z-10 hidden items-center">
 
 <nav id="menuList" class="flex flex-col items-end w-full h-fit gap-9 justify-center pr-6">
-  <li class="list-none flex"><a href="" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative">home</a></li>
-  <li class="list-none flex"><a href="" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative">informations</a></li>
-  <li class="list-none flex"><a href="" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative">quizz</a></li>
-  <li class="list-none flex"><a href="" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative">merci</a></li>
+  <a href="#homeBack" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">home</a>
+  <a href="#info" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">informations</a>
+  <a href="#merci" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">merci</a>
 </nav>
-
 </div>
 
 
-<div class="w-full text-3xl flex items-center justify-center gap-3 flex-col h-[90svh]">
+
+
+<div class="w-full text-3xl flex items-center justify-evenly gap-3 flex-col h-[90svh]">
 
   <div className="container-text-mom" class="flex text-center justify-center">
-  <p id="startscroll" class="uppercase font-nunito lg:w-[69rem] md:text-5xl text-2xl">
-    Les mamans assurent <strong class="text-orange animate-role">plusieurs rôles</strong> dans la vie de l'enfant
+  <p id="startscroll" class="uppercase font-nunito lg:w-[42rem] md:text-5xl text-2xl px-7 md:px-0">
+    Les mamans assurent <strong class="text-orange animate-role">plusieurs rôles</strong> dans la vie de l'enfant.
   </p>
 </div>
     
-  <p class="font-light font-nunito text-[5svw] md:text-3xl">Elles sont celles qui :</p>
+  <p class="font-light font-nunito text-[5.2svw] md:text-3xl uppercase">Elles sont celles qui :</p>
 
-  <div class="mt-32">
+  <div class="mb-10">
   <img src="img/fleche.svg" alt="une fleche qui pointe vers le bas">
 </div>
 </div>
@@ -69,104 +69,210 @@
 
 
 
-<div class=" flex justify-center items-center mb-36">
 
-   
-    <div class="">
-
-
+<div class=" flex justify-center items-center h-svh mb-32">
         
-        <div class="flex gap-20 flex-col">
-        <div class="flex gap-7">
+        <div class="flex gap-20 flex-col lg:scale-110 px-7 md:px-0 w-full">
+        <div class="flex gap-7 justify-center">
           
-          <img class="object-contain w-32 cursor-pointer" src="img/marmite.svg" alt="logo marmite">
-          <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui encouragent et qui guident.</span>
+          <img class="object-contain w-20 lg:w-32 transition ease-in-out hover:scale-110 duration-300" src="img/marmite.svg" alt="logo marmite">
+          <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] lg:text-4xl text-xl">encouragent et qui guident.</span>
           </div>
 
-          <div class="flex gap-7">
+          <div class="flex gap-7 justify-center">
             
-            <img class="object-contain w-32 cursor-pointer" src="img/hand_heart.svg" alt="logo marmite">
-            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">nourrissent physiquement et émotionnellement</span>
+            
+            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] lg:text-4xl text-xl">nourrissent physiquement et émotionnellement</span>
+            <img class="object-contain  w-20 lg:w-32 transition ease-in-out hover:scale-110 duration-300" src="img/hand_heart.svg" alt="logo marmite">
           </div>
 
-          <div class="flex gap-7">
+          <div class="flex gap-7 justify-center">
             
-            <img class="object-contain w-32 cursor-pointer" src="img/sign.svg" alt="logo marmite">
-            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] md:text-3xl text-2xl">qui enseignent, qui consolent</span>
-          </div>
+            <img class="object-contain  w-20 lg:w-32 transition ease-in-out hover:scale-110 duration-300" src="img/sign.svg" alt="logo marmite">
+            <span class="items-center justify-center uppercase flex text-center text-orange font-nunito font-bold lg:w-[37rem] lg:text-4xl text-xl">enseignent, qui consolent</span>
         </div>
 
 
-
-          <div class="flex justify-evenly gap-10 flex-col">
-            
-          
-          
-
-      </div>
-
+    
       
 
   </div>
-    
+
      
-  </div>
 
   </div>
-  <div class="w-full border-cyan-50 border-2 border-solid"></div>
+  <div class="w-full border-orange border-b-[15px] border-t-[16px] border-dashed"></div>
   </div>
  
 
-
-<div class="project-container lg:flex" id="projects">
-
-
-  <div class="section relative h-screen">
-    <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30 sm:opacity-80" style="background-image: url('/img/mum_and_girl.png');"></div>
-    <div class="flex items-center h-screen w-screen  z-[1] relative">
-      <span class="text-orange sm:w-[31rem] font-instrument sm:text-7xl flex z-10 flex-col gap-10 sm:ml-10 p-10 sm:p-0 text-6xl">
-        UN PILIER POUR L'ENFANT
-        <div class="font-nunito text-xl sm:text-2xl text-black font-semibold flex gap-8 flex-col">
-          <p class="text-justify">Un guide, une oreille attentive, une main tendue et un regard apaisant pour ses enfants, ainsi que son mari.</p>
-          <p>La maman est l’équilibre de chaque foyer.</p>
-          <p class="text-justify">C’est elle qui assure presque toutes les responsabilités liées avec ses enfants et sa maison.</p>
-        </div>
-      </span>
-    </div>
-  </div>
-
-  <div class="section flex justify-center items-center my-10">
-    <div class="flex flex-col gap-10 w-11/12 lg:w-[58rem]">
-      <div class="flex justify-between items-center bg-white rounded-[2.3rem] flex-col sm:flex-row sm:h-60 p-5">
-        <span class="text-orange font-nunito font-extrabold text-9xl sm:text-[10svw] md:text-8xl">65%</span>
-        <div class="flex flex-col bg-orange h-5/6 rounded-3xl font-nunito font-semibold text-white text-justify px-10 py-8 sm:w-2/3">
-          <span>Environ 65% des enfants qui ont une relation sécurisée avec leur mère ont tendance à être plus coopératifs, plus autonomes et plus empathiques.</span>
-          <span class="flex justify-end text-sm mt-2">American Psychological Association</span>
-        </div>
-      </div>
-
-      <div class="flex justify-center gap-5 flex-col lg:flex-row sm:flex-row">
-        <div class="bg-white rounded-[2.3rem] font-nunito flex-col px-10 py-8 h-60 flex justify-center sm:w-2/3">
-          <span class="sm:text-[2.9svw] sm:leading-8 md:text-2xl">Les enfants qui reçoivent un soutien maternel constant ont 25% moins de risques de souffrir de problèmes de santé mentale à l'âge adulte.</span>
-          <span class="flex justify-end text-sm">OMS</span>
-        </div>
-        <div class="bg-orange rounded-[2.3rem] font-extrabold h-60 flex justify-center items-center sm:w-1/3">
-          <span class="text-beige text-9xl sm:text-[10svw] md:text-8xl">25%</span>
-        </div>
+  <div class="project-container lg:flex" id="projects">
+    <div class="section relative h-screen" id="info">
+      <div class="transition1 absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30 sm:opacity-80" style="background-image: url('/img/mum_and_girl.png');"></div>
+      <div class="flex items-center h-screen w-screen  z-[1] relative">
+        <span class="text-orange sm:w-[31rem] font-instrument sm:text-7xl flex z-10 flex-col gap-10 sm:ml-10 p-10 sm:p-0 text-6xl">
+          UN PILIER POUR L'ENFANT
+          <div class="font-nunito text-xl sm:text-2xl text-black font-semibold flex gap-8 flex-col">
+            <p class="text-justify">Un guide, une oreille attentive, une main tendue et un regard apaisant pour ses enfants, ainsi que son mari.</p>
+            <p>La maman est l’équilibre de chaque foyer.</p>
+            <p class="text-justify">C’est elle qui assure presque toutes les responsabilités liées avec ses enfants et sa maison.</p>
+          </div>
+        </span>
       </div>
     </div>
-  </div>
-
-  <div class="section h-screen bg-orange flex items-center justify-center">
-    <div class="w-svw flex flex-col justify-center">
-      <span class="font-nunito font-light italic text-beige text-4xl text-justify leading-[3.3rem] lg:px-40">"Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."</span>
-      <span class="flex justify-end text-beige mt-5 lg:px-40">Marie-Eve Roberge</span>
-      <img class="relative top-72" src="img/transi.png" alt="">
+  
+    <div class="section transition3 flex justify-center items-center lg:p-52 relative py-10 lg:py-0">
+      <div class="absolute inset-0 lg:bg-gradient-to-r from-transparent to-orange backdrop-blur-sm"></div>
+  
+      <!-- Contenu de la troisième section -->
+      <div class="flex flex-col gap-10 w-11/12 lg:w-[58rem] relative z-10">
+        <div class="flex justify-between items-center bg-white rounded-[2.3rem] flex-col sm:flex-row sm:h-60 p-5">
+          <span class="text-orange font-nunito font-extrabold text-9xl sm:text-[10svw] md:text-8xl grow flex justify-center cursor-default transition ease-in-out hover:scale-110 duration-300">65%</span>
+          <div class="flex flex-col bg-orange h-5/6 rounded-3xl font-nunito font-semibold text-white text-justify px-10 py-8 sm:w-2/3 text-xl">
+            <span>Environ 65% des enfants qui ont une relation sécurisée avec leur mère ont tendance à être plus coopératifs, plus autonomes et plus empathiques.</span>
+            <span class="flex justify-end text-sm mt-2">American Psychological Association</span>
+          </div>
+        </div>
+  
+        <div class="flex justify-center gap-5 flex-col lg:flex-row sm:flex-row">
+          <div class="bg-white rounded-[2.3rem] font-nunito flex-col px-10 py-8 h-60 flex justify-center sm:w-2/3">
+            <span class="sm:text-[2.9svw] sm:leading-8 md:text-2xl">Les enfants qui reçoivent un soutien maternel constant ont 25% moins de risques de souffrir de problèmes de santé mentale à l'âge adulte.</span>
+            <span class="flex justify-end text-sm">OMS</span>
+          </div>
+          <div class="bg-orange rounded-[2.3rem] font-extrabold h-60 flex justify-center items-center sm:w-1/3">
+            <span class="text-beige text-9xl sm:text-[10svw] md:text-8xl cursor-default transition ease-in-out hover:scale-110 duration-300">25%</span>
+          </div>
+        </div>
+      </div>
     </div>
+  
+    <div class="section h-screen bg-orange flex items-center justify-center">
+      <div class="w-svw flex flex-col">
+        <span class="font-nunito font-light italic text-beige text-4xl text-justify leading-[3.3rem] lg:px-32 flex grow items-center">"Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."</span>
+        <span class="flex justify-end text-beige mt-5 lg:px-40">Marie-Eve Roberge</span>
+        
+        <!-- <div class="parallax-container z-40 relative h-52 top-72 border-solid lg:border-black lg:border-4 rounded-[3rem] overflow-hidden">
+          <div class="parallax absolute inset-0 bg-fixed bg-cover bg-center bg-no-repeat lg:bg-[url('/img/transi.png')] transform-gpu scale-110"></div>
+        </div>
+         -->
+        
+      </div>
+    </div>
+  </div>
+  
+
+<div class="h-[33rem] flex flex-col bg-orange items-center justify-start gap-40">
+  <span class="font-instrument italic text-beige text-7xl flex text-center">Au final, elles sont toutes</span>
+  <div class="bg-beige w-44 h-44 rounded-full group">
+    <strong class="flex items-center justify-center w-full h-full text-8xl cursor-default  group-hover:scale-110 duration-200 ease-in">👀</strong>
   </div>
 </div>
+<div class="border-2 border-black"></div>
 
-<div class="h-svh">a</div>
+
+
+<div class="grid grid-cols-5 gap-4 justify-items-center mt-10">
+
+  <div class="flex flex-col col-start-4">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/attention.png" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Attentionnées</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">001</span>
+  </div>
+
+  <div class="flex flex-col col-start-2 row-start-2	">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/belles.png" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Belles</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">002</span>
+  </div>
+
+  <div class="flex flex-col col-start-4 row-start-3">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/genereuse.webp" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Généreuses</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">003</span>
+  </div>
+
+  <div class="flex flex-col col-start-2 row-start-4">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/travail.png" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Travailleuses</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">004</span>
+  </div>
+
+  <div class="flex flex-col col-start-4 row-start-5">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/ecoute.png" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">À l'écoute</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">005</span>
+  </div>
+
+  <div class="flex flex-col col-start-2 row-start-6">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/gentille.jpeg" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Gentilles</span> 
+    <span class="w-fit font-instrument text-orange italic text-3xl">006</span>
+  </div>
+
+  <div class="flex flex-col col-start-4 row-start-7">
+    <div class="group overflow-x-hidden overflow-y-hidden w-52">
+      <img class="w-52 rounded-sm animation group-hover:scale-110 ease-out duration-300 delay-[30ms]" src="img/fiere.png" alt="">
+    </div>
+    <span class="w-fit text-orange font-nunito text-3xl">Fières</span> 
+    <a href="https://fr.wikipedia.org/wiki/James_Bond" class="w-fit"><span class="w-fit font-instrument text-orange italic text-3xl">007</span></a>
+  </div>
+
+</div>
+
+
+
+<div id="merci" class=" h-svh flex justify-center items-center">
+  <div class="flex items-center gap-10 flex-col">
+  <span class="flex justify-center text-orange font-instrument italic text-6xl ">Merci pour tout Maman</span>
+  <img class="w-40 hover:animate-ping" src="img/coeur.png" alt="">
+</div>
+</div>
+
+
+
+
+
+
+<!-- <footer>
+<div class="w-full overflow-hidden py-4">
+  <div id="svg-container" class="flex w-full">
+    <svg class="flex-shrink-0" width="1283" height="6" viewBox="0 0 1283 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 3L1280 3.00011" stroke="#FF5937" stroke-width="6" stroke-miterlimit="2.85812" stroke-linecap="round" stroke-dasharray="20 20"/>
+    </svg>
+  </div>
+</div>
+  
+  <div class="flex gap-10 flex-col">
+
+  <div class="flex justify-between">
+    <div class="flex items-center">
+      <a href="https://mariusnogueron.fr/" class="flex items-center gap-10 group">
+        <img src="img/right_arrow.svg" class="animation group-hover:translate-x-10 ease-out duration-300" alt="">
+      <span class="capitalize font-instrument text-8xl text-orange">marius nogueron</span>
+    </a>
+    </div>
+    <img class="w-28 mr-10" src="img/logo_footer.svg" alt="">
+</div>
+
+    <div class="flex justify-between items-center mt-10 mb-5">
+      <a href="#homeBack" class="text-beige px-2 py-1 rounded-xl items-center flex w-fit bg-orange ml-5"><span class="uppercase font-instrument text-5xl">start</span></a>
+      <span class="font-instrument text-orange text-5xl mr-10">© 2024</span>
+
+    </div>
+  </div>
+
+</footer> -->
 
 
   </body>

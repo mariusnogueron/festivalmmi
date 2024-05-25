@@ -17,7 +17,8 @@ export default {
         role : 'role'
       },
       backgroundImage : {
-        'mum_and_girl': "url:('img/mum_and_girl.png')"
+        'mum_and_girl': "url:('img/mum_and_girl.png')",
+        'parallax' : 'url:("../img/transi.png")'
       },
       dropShadow : {
         'merci' : '0 2px 3px rgb(255, 89, 55, 0.8)',

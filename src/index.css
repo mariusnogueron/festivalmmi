@@ -4,3 +4,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.transition1::after {
+    @apply lg:absolute inset-0 bg-gradient-to-r from-transparent to-beige backdrop-blur-sm;
+    content: '';
+  }
