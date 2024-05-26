@@ -109,12 +109,14 @@ ScrollTrigger.create({
 });
 
 
-  fillSVGs();
 
+ document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM chargé");
 
     gsap.registerPlugin(ScrollTrigger);
 
     const homeButton = document.getElementById("homeButton");
+    console.log("homeButton trouvé :", homeButton);
 
     // Déclencheur pour changer la couleur du bouton en fonction de l'entrée et de la sortie du champ
     ScrollTrigger.create({
@@ -122,22 +124,27 @@ ScrollTrigger.create({
         start: "top top",
         end: "+=4050px",
         onEnter: () => {
+            console.log("Entrée dans la zone de déclenchement");
             homeButton.classList.remove("text-orange");
             homeButton.classList.add("text-white");
         },
         onLeave: () => {
+            console.log("Sortie de la zone de déclenchement");
             homeButton.classList.remove("text-white");
             homeButton.classList.add("text-orange");
         },
         onEnterBack: () => {
+            console.log("Entrée arrière dans la zone de déclenchement");
             homeButton.classList.remove("text-orange");
             homeButton.classList.add("text-white");
         },
         onLeaveBack: () => {
+            console.log("Sortie arrière de la zone de déclenchement");
             homeButton.classList.remove("text-white");
             homeButton.classList.add("text-orange");
         },
     });
+});
 
 
 
