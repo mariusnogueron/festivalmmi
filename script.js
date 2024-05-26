@@ -109,21 +109,6 @@ ScrollTrigger.create({
 });
 
 
-function fillSVGs() {
-    const container = document.getElementById('svg-container');
-    const svg = container.querySelector('svg');
-    const svgWidth = svg.getBoundingClientRect().width;
-    const containerWidth = container.parentElement.getBoundingClientRect().width;
-    const svgCount = Math.ceil(containerWidth / svgWidth);
-
-    container.innerHTML = '';
-
-    for (let i = 0; i < svgCount; i++) {
-      const clonedSvg = svg.cloneNode(true);
-      container.appendChild(clonedSvg);
-    }
-  }
-
   fillSVGs();
 
   document.addEventListener("DOMContentLoaded", function () {
