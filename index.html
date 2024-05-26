@@ -8,22 +8,23 @@
 
     <link rel="stylesheet" href="src/index.css">
   </head>
+
   <body class="bg-beige overflow-x-hidden">
 
 
     <div id="loader" class="h-svh w-full z-100 fixed bg-no-repeat bg-center bg-[length:15%]" style="background-image: url('videos/loader.gif');"></div>
 
-    <div id="startscroll" class=" h-svh flex flex-col justify-center items-center ">
+    <div id="startscroll2" class=" h-svh flex flex-col justify-center items-center ">
       <span class="container-start flex flex-col gap-10 text-orange font-instrument  text-4xl w-[80svw] lg:w-[64rem] lg:text-6xl sm:w-[86svw] sm:text-[5svw]">"Maman, est-ce que j’ai quelque chose à moi qui ne 
         soit pas à vous ?" <strong>- Émile Zola</strong></span>
-      <a href="#accueil"><svg class="absolute bottom-1 transform -translate-x-1/2 left-1/2" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
+      <a href="#accueil"><svg class="absolute animate-bounce  bottom-1 transform -translate-x-1/2 left-1/2" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
     </div>
 
 
 
 <section id="accueil" class="h-svh flex flex-col">
 <nav id="navBar" class="z-30 flex justify-between items-center p-5 w-full fixed top-0 delay-400 ease-out	duration-300">
-  <a href="#homeBack" id="home" class="md:text-4xl text-3xl uppercase font-instrument italic text-orange z-20">home</a>
+  <a href="#homeBack" id="homeButton" class="md:text-4xl text-3xl uppercase font-instrument italic text-orange z-20">home</a>
   <button id="buttonMenu" class="group relative font-semibold md:text-4xl text-3xl uppercase text-beige z-50 bg-orange rounded-xl px-1.5 py-1 border border-black shadow-menu shadow-black duration-100 ease-linear active:hover:translate-x-1 active:hover:translate-y-1 active:hover:shadow-none">menu</button>
 </nav>
 
@@ -33,16 +34,19 @@
   Merci Maman
 </h1>
 
-<a class="flex justify-center" href=""><svg class=" absolute bottom-1 animate-bounce" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
+
+<a class="flex justify-center" href="#thanksArrow"><svg class=" absolute bottom-1 animate-bounce" xmlns="http://www.w3.org/2000/svg"  width="48"  height="48"  viewBox="0 0 24 24"  fill="none"  stroke="#FF5937"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg></a>
 </div>
 </section>
+
+
 
 
 
 <div id="menu" class="bg-orange fixed top-0 w-full h-full z-10 hidden items-center">
 
 <nav id="menuList" class="flex flex-col items-end w-full h-fit gap-9 justify-center pr-6">
-  <a href="#homeBack" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">home</a>
+  <a href="#accueil" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">home</a>
   <a href="#info" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">informations</a>
   <a href="#merci" class="text-[10svw] md:text-7xl lg:text-7xl uppercase font-nunito font-bold text-beige z-20 relative hover:underline">merci</a>
 </nav>
@@ -53,15 +57,15 @@
 
 <div class="w-full text-3xl flex items-center justify-evenly gap-3 flex-col h-[90svh]">
 
-  <div className="container-text-mom" class="flex text-center justify-center">
+  <div id="thanksArrow" className="container-text-mom" class="flex text-center justify-center">
   <p id="startscroll" class="uppercase font-nunito lg:w-[42rem] md:text-5xl text-2xl px-7 md:px-0">
     Les mamans assurent <strong class="text-orange animate-role">plusieurs rôles</strong> dans la vie de l'enfant.
   </p>
 </div>
     
-  <p class="font-light font-nunito text-[5.2svw] md:text-3xl uppercase">Elles sont celles qui :</p>
+  <p id="miaouu" class=" font-light font-nunito text-[5.2svw] md:text-3xl uppercase">Elles sont celles qui :</p>
 
-  <div class="mb-10">
+  <div class="mb-10 ">
   <img src="img/fleche.svg" alt="une fleche qui pointe vers le bas">
 </div>
 </div>
@@ -70,7 +74,7 @@
 
 
 
-<div class=" flex justify-center items-center h-svh mb-32">
+<div id="stopcolor" class=" flex justify-center items-center h-svh mb-32">
         
         <div class="flex gap-20 flex-col lg:scale-110 px-7 md:px-0 w-full">
         <div class="flex gap-7 justify-center">
@@ -147,8 +151,8 @@
   
     <div class="section h-screen bg-orange flex items-center justify-center">
       <div class="w-svw flex flex-col">
-        <span class="font-nunito font-light italic text-beige text-4xl text-justify leading-[3.3rem] lg:px-32 flex grow items-center">"Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."</span>
-        <span class="flex justify-end text-beige mt-5 lg:px-40">Marie-Eve Roberge</span>
+        <span class="font-nunito font-light italic text-beige text-justify lg:leading-[3.5rem] lg:px-32 text-xl px-4 md:px-0 lg:text-[3rem] flex grow items-center">"Une maman peut faire presque tous les métiers; infirmière, taxi, clown, professeur, psychologue, humoriste, cuisinière, couturière et bien d’autres, tout en y mettant tout son cœur et ce gratuitement."</span>
+        <span class="flex justify-end text-beige mt-5 lg:px-40 mr-10 md:mr-0">Marie-Eve Roberge</span>
         
         <!-- <div class="parallax-container z-40 relative h-52 top-72 border-solid lg:border-black lg:border-4 rounded-[3rem] overflow-hidden">
           <div class="parallax absolute inset-0 bg-fixed bg-cover bg-center bg-no-repeat lg:bg-[url('/img/transi.png')] transform-gpu scale-110"></div>
@@ -170,7 +174,7 @@
 
 
 
-<div class="grid grid-cols-5 gap-4 justify-items-center mt-10">
+<div class="grid grid-cols-5 gap-4 justify-items-center mt-10 mx-10 md:mx-0">
 
   <div class="flex flex-col col-start-4">
     <div class="group overflow-x-hidden overflow-y-hidden w-52">
@@ -233,7 +237,7 @@
 
 
 <div id="merci" class=" h-svh flex justify-center items-center">
-  <div class="flex items-center gap-10 flex-col">
+  <div class="flex items-center gap-10 flex-col text-center">
   <span class="flex justify-center text-orange font-instrument italic text-6xl ">Merci pour tout Maman</span>
   <img class="w-40 hover:animate-ping" src="img/coeur.png" alt="">
 </div>
@@ -244,7 +248,7 @@
 
 
 
-<!-- <footer>
+<footer>
 <div class="w-full overflow-hidden py-4">
   <div id="svg-container" class="flex w-full">
     <svg class="flex-shrink-0" width="1283" height="6" viewBox="0 0 1283 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -255,24 +259,23 @@
   
   <div class="flex gap-10 flex-col">
 
-  <div class="flex justify-between">
-    <div class="flex items-center">
+  <div class="flex justify-between pb-5">
+    <div class="flex items-center ml-2">
       <a href="https://mariusnogueron.fr/" class="flex items-center gap-10 group">
-        <img src="img/right_arrow.svg" class="animation group-hover:translate-x-10 ease-out duration-300" alt="">
-      <span class="capitalize font-instrument text-8xl text-orange">marius nogueron</span>
+        <img src="img/right_arrow.svg" class="hidden lg:block animation group-hover:translate-x-10 ease-out duration-300" alt="">
+      <span class="capitalize font-instrument lg:text-8xl text-5xl flex text-orange">marius nogueron</span>
     </a>
     </div>
-    <img class="w-28 mr-10" src="img/logo_footer.svg" alt="">
+    <img class="md:w-28 w-20  md:mr-10 mr-2 " src="img/logo_footer.svg" alt="">
 </div>
 
-    <div class="flex justify-between items-center mt-10 mb-5">
-      <a href="#homeBack" class="text-beige px-2 py-1 rounded-xl items-center flex w-fit bg-orange ml-5"><span class="uppercase font-instrument text-5xl">start</span></a>
-      <span class="font-instrument text-orange text-5xl mr-10">© 2024</span>
 
-    </div>
+  
+
+   
   </div>
 
-</footer> -->
+</footer>
 
 
   </body>
