@@ -111,7 +111,7 @@ ScrollTrigger.create({
 
   fillSVGs();
 
-  document.addEventListener("DOMContentLoaded", function () {
+
     gsap.registerPlugin(ScrollTrigger);
 
     const homeButton = document.getElementById("homeButton");
@@ -138,7 +138,7 @@ ScrollTrigger.create({
             homeButton.classList.add("text-orange");
         },
     });
-});
+
 
 
 
